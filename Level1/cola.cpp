@@ -20,7 +20,11 @@ int solution(int a, int b, int n) {
     int answer = 0;
     int temp = 0;
     
-    while(n>=a){
+    while(n>=a){ 
+        /*
+        조건을 n > 1로 했을 때는 입력 값에 따라 무한 반복이 되었음
+        n >= a 가 맞는 답
+        */
         temp = n/a;
         answer += temp;
         n = n/a + n%a;
